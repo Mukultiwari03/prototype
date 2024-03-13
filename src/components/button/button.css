@@ -1,46 +1,50 @@
-.buttondiv{
-    background-color: black;
-    align-items:center;
-    justify-content:center;
-    display:flex;
-    height:max-content
+.button {
+    position: relative;
+    display: inline-block;
 }
-.button{
-    font-size:25px;
+
+.button {
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing:2px;
-    color:#fff;
-    outline:4px solid #fff;
-    padding:30px 60px;
-    position:relative;
-    overflow:hidden;
-    transition:color 1s;
+    letter-spacing: 2px;
+    color: #fff;
+    outline: 4px solid #fff;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    z-index: 1;
 }
-.button span{
+
+.button span {
     color: #000;
 }
-.button:hover{
-    color:rgb(226, 43, 43) !important;
+
+.button:hover {
+    color: rgb(226, 43, 43) !important;
 }
 
-.button:hover span{
-    color:rgb(226, 43, 43) !important;
+.button:hover span {
+    color: rgb(226, 43, 43) !important;
 }
-.buttondiv::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-50px;
-    width:60%;
-    height:100%;
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13%;
+    width: 57%; /* Adjust width */
+    height: 100%;
     background-color: #fff;
-    transform:skewX(35deg);
+    transform: skewX(35deg);
     z-index:-1;
-    transition:all .5s;
+    transition: all .5s;
+    overflow:hidden;
+    clip:inherit;
 }
 
-.button:hover::before{
-    width: 200%;
-
+.button:hover::before {
+    left: -25%; /* Adjust position */
+    width: 115%; /* Adjust width */
 }
